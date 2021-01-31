@@ -15,9 +15,7 @@
 	<description>API com ordem de compras</description>
 
 	<properties>
-		<java.version>11</java.version>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>		
+		<java.version>11</java.version>	
 	</properties>
 
 
@@ -85,6 +83,14 @@
 					</excludes>
 				</configuration>
 			</plugin>
+        	<plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
+            	<artifactId>maven-compiler-plugin</artifactId>
+            	<version>3.8.0</version>
+            	<configuration>
+                	<release>11</release>
+            	</configuration>
+        	</plugin>			
 		</plugins>
 	</build>
 
