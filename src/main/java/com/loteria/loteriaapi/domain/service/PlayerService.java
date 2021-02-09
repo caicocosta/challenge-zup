@@ -1,5 +1,7 @@
 package com.loteria.loteriaapi.domain.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,5 +34,9 @@ public class PlayerService {
 		Bets bets = betsService.createBets(player);
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(bets);
+	}
+	
+	public List<Player> List(){
+		return playerRepository.findAll();
 	}
 }
